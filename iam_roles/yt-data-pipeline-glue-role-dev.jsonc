@@ -1,0 +1,29 @@
+// This is the IAM policy for the Glue role used in the YouTube data pipeline in the development environment.
+
+// This role also contains AWSGlueServiceRole permissions (AWS Managed policy), which are required for Glue to function properly. These permissions are not included in this policy document, but are attached to the role separately in AWS.
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3FullAccess",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::yt-data-pipeline-bronze-ap-south2-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-bronze-ap-south2-dev",
+                "arn:aws:s3:::yt-data-pipeline-silver-ap-south2-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-silver-ap-south2-dev",
+                "arn:aws:s3:::yt-data-pipeline-gold-ap-south2-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-gold-ap-south2-dev",
+                "arn:aws:s3:::yt-data-pipeline-scripts-ap-south2-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-scripts-ap-south2-dev"
+            ]
+        }
+    ]
+}
