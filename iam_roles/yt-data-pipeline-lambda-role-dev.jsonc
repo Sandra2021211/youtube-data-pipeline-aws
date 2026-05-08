@@ -1,3 +1,7 @@
+// This is the IAM policy for the Lambda role used in the YouTube data pipeline in the development environment.
+
+// This role also contains AWSLambdaBasicExecutionRole permissions (AWS Managed policy), which are required for Lambda to function properly. These permissions are not included in this policy document, but are attached to the role separately in AWS.
+
 {
 	"Version": "2012-10-17",
 	"Statement": [
