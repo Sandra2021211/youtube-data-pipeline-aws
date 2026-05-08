@@ -1,6 +1,8 @@
 """
 This JSON to Parquet Lambda function is for YouTube API data source only.
 
+Reads data from the raw_statistics_reference_data folder in the Bronze bucket. This folder contains only JSON data, which is the category reference data.
+
 Lambda: JSON Reference Data → Silver Layer (Parquet)
 ────────────────────────────────────────────────────
 Triggered by S3 event when new JSON lands in the Bronze bucket

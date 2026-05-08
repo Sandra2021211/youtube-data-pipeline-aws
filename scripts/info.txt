@@ -14,9 +14,11 @@ SNS ARN -> arn:aws:sns:ap-south-2:267923959886:yt-data-pipeline-alerts-dev:a18cb
 
 Lambda for API ingestion -> yt-data-pipeline-youtube-api-ingestion-dev
 Lambda for json to parquet_to_silver -> yt-data-pipeline-json-to-parquet-dev
+Lambda for data quality check in data quality gate -> yt-data-pipeline-data-quality-dev
 
 Glue database for bronze -> yt_pipeline_bronze_dev
 Glue database for silver -> yt_pipeline_silver_dev
 Glue database for gold -> yt_pipeline_gold_dev
 
+Glue job for bronze to silver -> yt-data-pipeline-bronze-to-silver-dev
 
