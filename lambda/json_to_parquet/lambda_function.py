@@ -1,4 +1,6 @@
 """
+This JSON to Parquet Lambda function is for YouTube API data source only.
+
 Lambda: JSON Reference Data → Silver Layer (Parquet)
 ────────────────────────────────────────────────────
 Triggered by S3 event when new JSON lands in the Bronze bucket
