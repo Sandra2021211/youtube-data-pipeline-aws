@@ -7,13 +7,16 @@
 			"Action": [
 				"s3:GetObject",
 				"s3:PutObject",
-				"s3:ListBucket"
+				"s3:ListBucket",
+				"s3:GetBucketLocation"
 			],
 			"Resource": [
 				"arn:aws:s3:::yt-data-pipeline-bronze-ap-south2-dev/*",
 				"arn:aws:s3:::yt-data-pipeline-bronze-ap-south2-dev",
 				"arn:aws:s3:::yt-data-pipeline-silver-ap-south2-dev/*",
-				"arn:aws:s3:::yt-data-pipeline-silver-ap-south2-dev"
+				"arn:aws:s3:::yt-data-pipeline-silver-ap-south2-dev",
+				"arn:aws:s3:::yt-data-pipeline-glue-athena-query-results-ap-south2",
+				"arn:aws:s3:::yt-data-pipeline-glue-athena-query-results-ap-south2/*"
 			]
 		},
 		{
@@ -42,7 +45,8 @@
 			"Action": [
 				"athena:StartQueryExecution",
 				"athena:GetQueryExecution",
-				"athena:GetQueryResults"
+				"athena:GetQueryResults",
+				"athena:GetWorkGroup"
 			],
 			"Resource": "*"
 		}
