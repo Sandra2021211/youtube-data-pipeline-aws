@@ -1,0 +1,27 @@
+// This is the IAM policy for the StepFunction role used in the YouTube data pipeline in the development environment.
+
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": "lambda:InvokeFunction",
+			"Resource": "arn:aws:lambda:ap-south-2:267923959886:function:yt-data-pipeline-*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"glue:StartJobRun",
+				"glue:GetJobRun",
+				"glue:GetJobRuns",
+				"glue:BatchStopJobRun"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": "sns:Publish",
+			"Resource": "arn:aws:sns:ap-south-2:267923959886:yt-data-pipeline-*"
+		}
+	]
+}
