@@ -22,4 +22,7 @@ Glue database for silver -> yt_pipeline_silver_dev
 Glue database for gold -> yt_pipeline_gold_dev
 
 Glue job for bronze to silver -> yt-data-pipeline-bronze-to-silver-dev
+Glue job for silver to gold -> yt-pipeline-silver-to-gold-dev
 
+StepFunction:
+State machine name -> yt-data-pipeline-orchestration
