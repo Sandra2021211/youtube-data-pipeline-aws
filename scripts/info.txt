@@ -6,6 +6,7 @@ Athena query bucket name -> yt-data-pipeline-glue-athena-query-results-ap-south2
 
 Lambda role -> yt-data-pipeline-lambda-role-dev
 Glue role -> yt-data-pipeline-glue-role-dev
+StepFunction role -> yt-data-pipeline-stepfunction-role-dev
 
 Glue crawler bronze -> yt-data-pipeline-bronze-crawler-dev
 
